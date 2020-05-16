@@ -13,8 +13,8 @@ export default {
   },
 
   async mounted() {
-    const res = await this.$get('/')
-    console.log(res.data,'res.data')
+    // const res = await this.$get('/')
+    // console.log(res.data,'res.data')
   },
 
   methods: {
