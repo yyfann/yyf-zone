@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 //项目根目录
 var projectDir = path.join(__dirname, '..');
 
-const env = require(`../config/${process.env.NODE_ENV}`)
+const env = require(`../config/${process.env.NODE_ENV}`) 
 
 
 module.exports = {
