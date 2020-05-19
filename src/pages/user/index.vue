@@ -71,7 +71,7 @@ export default {
       this.getUsers();
     },
 
-    deleteUser(row) {
+    async deleteUser(row) {
       await this.$post("/users/removePerson", {
         _id: row._id
       });
