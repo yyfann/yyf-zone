@@ -72,7 +72,7 @@ export default {
     },
 
     deleteUser(row) {
-      this.$post("/users/removePerson", {
+      await this.$post("/users/removePerson", {
         _id: row._id
       });
       this.getUsers();
