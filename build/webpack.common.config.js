@@ -1,9 +1,13 @@
 const path = require("path");
+const webpack = require('webpack')
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 //项目根目录
 var projectDir = path.join(__dirname, '..');
+
+const env = require(`../config/${process.env.NODE_ENV}`)
+
 
 module.exports = {
   entry: path.resolve(__dirname, "../src/main.js"),
@@ -69,5 +73,8 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      DOMAIN: JSON.stringify(env.domain)
+    })
   ],
 };

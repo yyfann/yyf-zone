@@ -1,3 +1,4 @@
+import user from "@/pages/user/index.vue";
 import home from "@/pages/home/index.vue";
 
 
@@ -9,6 +10,14 @@ export default [
       title: "首页"
     },
     component: home
+  },
+  {
+    path: "/user",
+    name: "user",
+    meta: {
+      title: "用户"
+    },
+    component: user
   },
 
 ];

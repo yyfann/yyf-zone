@@ -44,7 +44,6 @@ export default {
 
 .content {
   margin-top: 10px;
-  border: 1px solid black;
   padding: 10px;
 }
     

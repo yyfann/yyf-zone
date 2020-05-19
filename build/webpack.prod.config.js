@@ -1,8 +1,10 @@
 const path = require("path");
 const webpackMerge = require('webpack-merge')
-const commonConfig = require('./webpack.common.config')
-
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
+
+process.env.NODE_ENV = 'prod'
+
+const commonConfig = require('./webpack.common.config')
 
 const devConfig = {
   mode: "production",

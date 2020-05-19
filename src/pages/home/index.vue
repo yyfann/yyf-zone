@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>主页 hh22 </h1>
+    <div>{{ list }}</div>
   </div>
 </template>
 
@@ -8,14 +8,13 @@
 export default {
   data() {
     return {
-      
+      list: [],
     }
   },
 
   async mounted() {
-    
-    // const res = await this.$get('/')
-    // console.log(res.data,'res.data')
+    this.list = await this.$get('/list')
+    console.log(this.list,'this.list') 
   },
 
   methods: {

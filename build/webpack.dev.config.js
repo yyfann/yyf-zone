@@ -1,6 +1,9 @@
 const path = require("path");
 const webpackMerge = require('webpack-merge')
 
+
+process.env.NODE_ENV = 'dev'
+
 const commonConfig = require('./webpack.common.config')
 
 const devConfig = {
