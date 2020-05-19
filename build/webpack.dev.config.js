@@ -10,7 +10,7 @@ const devConfig = {
   mode: "development",
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    port: 8001,
+    port: 8101,
     // open: true,
     hot: true,
   },
