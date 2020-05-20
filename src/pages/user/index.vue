@@ -6,10 +6,10 @@
       ref="form"
     >
       <el-form-item label="名称">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.username"></el-input>
       </el-form-item>
-      <el-form-item label="年龄">
-        <el-input v-model="form.age"></el-input>
+      <el-form-item label="密码">
+        <el-input v-model="form.password"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button
@@ -26,12 +26,12 @@
     >
       <el-table-column
         label="姓名"
-        prop="name"
+        prop="username"
         width="180"
       ></el-table-column>
       <el-table-column
-        label="年龄"
-        prop="age"
+        label="密码"
+        prop="password"
       ></el-table-column>
       <el-table-column label="操作">
         <template slot-scope="{row}">
@@ -51,8 +51,8 @@ export default {
     return {
       users: [],
       form: {
-        name: "hh",
-        age: 18
+        username: "用户1",
+        password: 123
       }
     };
   },

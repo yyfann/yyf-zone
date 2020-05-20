@@ -1,13 +1,6 @@
 <template>
   <div>
-    <div class="nav">
-      <router-link
-        class="nav-option"
-        v-for="(route, routeIndex) in routes"
-        :key="routeIndex"
-        :to="route.path"
-      >{{ route.meta.title }}</router-link>
-    </div>
+    <navigation></navigation>
     <div class="content">
       <router-view></router-view>
     </div>
@@ -15,36 +8,28 @@
 </template>
 
 <script>
-
+import navigation from "./components/navigation";
 export default {
+  components: {
+    navigation,
+  },
   data() {
     return {
-      routes: []
-    }
+    };
   },
 
   created() {
-    this.routes = this.$router.options.routes
   },
 
-  methods: {
-
-  },
-}
+  methods: {}
+};
 </script>
 
 <style scoped>
-.nav {
-  height: 100px;
-  background: skyblue;
-}
-.nav-option {
-  margin: 10px;
-}
+
 
 .content {
   margin-top: 10px;
   padding: 10px;
 }
-    
 </style>
