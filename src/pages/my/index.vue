@@ -4,7 +4,7 @@
       :size="100"
       :src="circleUrl"
     ></el-avatar>
-    <h2>{{ username || '没有登录, 弟弟!' }}</h2>
+    <h2>{{ username || '没有登录, 弟弟!!! 不登录后悔~' }}</h2>
 
     <el-form
       :model="userForm"
@@ -34,6 +34,15 @@
       @click="logOut"
       v-if="username"
     >退出</el-button>
+    <el-link
+      :underline="false"
+      href="http://www.yyfann.com:8010/"
+      type="danger"
+      v-if="username"
+    >
+      开始玩游戏!!
+      <i class="el-icon-view el-icon--right"></i>
+    </el-link>
   </div>
 </template>
 
