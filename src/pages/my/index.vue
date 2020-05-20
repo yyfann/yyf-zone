@@ -39,7 +39,7 @@
       href="http://www.yyfann.com:8010/"
       type="danger"
       v-if="username"
-    >
+    > 
       开始玩游戏!!
       <i class="el-icon-view el-icon--right"></i>
     </el-link>
